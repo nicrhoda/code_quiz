@@ -1,0 +1,36 @@
+/* background color for the webpage */
+body {
+    background-color:#0E3D7E;
+}
+
+/* styling for the container */
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+    background-color: #7D9DCA;
+    height: 200px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    padding: 1.2rem;
+}
+
+/* styling for the start button */
+#start-button {
+    background-color: #09254E;
+    color: white;
+}
+
+/* hover effect for the start button */
+#start-button:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    transition-duration: 500ms;
+}
+
+h2 {
+    font: bold;
+}
+
