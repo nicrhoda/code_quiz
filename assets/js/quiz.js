@@ -42,5 +42,53 @@ var quizQuestions = [{
     answer: "true"
 }];
 
-//function for generating quiz choices
+//function for generating list with questions in it
 
+function addChoiceList() {
+    function newChoice(choices) {
+        
+        var button = document.createElement("button");
+        var choicesEl = document.createElement('li');
+        var choicesContent = choices;
+       
+        
+        button.textContent = choicesContent;
+        button.className = "choices-btn";
+
+        button.addEventListener("click", function() {
+            userAnswer(button.textContent);
+        }, true);
+
+        choicesEl.appendChild("button");
+        questionList.appendChild(choicesEl);
+    }
+
+    var questionList = document.createElement('ul');
+    //list styles?
+
+    var currentQuestion = quizQuestions[questionCount];
+    currentQuestion.choices.forEach(newChoice);
+
+    return questionList;
+}
+
+//right or wrong feedback function
+
+function userAnswer() {
+    var currentQuestion = questions[questionCount];
+    var answerText = document.querySelector('.feedback');
+
+    if (currentQuestion.answer == answer) {
+        answerText.textContent = "Correct";
+    }
+    else {
+        answerText.textContent = "Wrong";
+        secondsRemaining.textContent = secondsRemaining -10;
+    }
+
+
+}
+
+
+
+console.log(quizQuestions);
