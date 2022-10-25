@@ -1,0 +1,37 @@
+/* styling for the try again button */
+a {
+    border: solid;
+    background-color: white;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/* styling for the background of the page */
+body {
+    background-color: #0E3D7E;
+}
+
+/* styling for the container */
+.container {
+    border: solid;
+    background-color: #7D9DCA;
+    text-align: center;
+    margin-top: 6rem;
+    height: 10rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* centering and bolding the header */
+header {
+    font-size: xx-large;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* styling the p tag text on the document */
+p {
+    font-size: medium;
+    font-weight: bold;
+}

@@ -16,6 +16,10 @@ var promptText_2 = "What does DOM stand for?";
 var option_4 = "Document Objective Model";
 var option_5 = "Dollop Of Mayo";
 var option_6 = "Document Object Model";
+var optionEl_4 = document.querySelector('.option-4');
+var optionEl_5 = document.querySelector('.option-5');
+var optionEl_6 = document.querySelector('.option-6');
+var answer_2 = "Document Object Model";
 // function to start the 60 second countdown
 console.log(buttonEl);
 questionDisplay_1();
@@ -36,7 +40,7 @@ function setTime() {
 
 }
 
-// questions 1
+// questions 1 display
 function questionDisplay_1() {
 
 
@@ -48,20 +52,16 @@ function questionDisplay_1() {
         setTime();
 }
 
-// questions 2
+// questions 2 display
 function questionDisplay_2() {
-    // var promptText_2 = "What does DOM stand for?";
-    // var option_4 = "Document Objective Model";
-    // var option_5 = "Dollop Of Mayo";
-    // var option_6 = "Document Object Model";
 
         questionsContent.append(promptText_2);
-        optionEl_1.append(option_4);
-        optionEl_2.append(option_5);
-        optionEl_3.append(option_6);
+        optionEl_4.append(option_4);
+        optionEl_5.append(option_5);
+        optionEl_6.append(option_6);
 }
 
-//event listener for "click"
+//event listener for "click" and returning feedback for the response
 
 function userInput_1() {
     buttonEl[0].addEventListener("click", function response() {
@@ -89,6 +89,29 @@ function userInput_1() {
             nextQuestion();
         }})
     }  
+
+// repeating function for the first set of questions to return correct or incorrect
+    function userInput_2() {
+        button[3].addEventListener("click", function response() {
+            if (optionEl_4.textContent === answer_2) {
+                displayFeedback.textContent = "correct";
+            } else {
+                displayFeedback.textContent = "incorrect";
+            }})
+        buttonEl[4].addEventListener("click", function response() {
+            if (optionEl_5.textContent === answer_2) {
+                displayFeedback.textContent = "correct";
+            } else {
+                displayFeedback.textContent = "incorrect";
+            }})
+        buttonEl[5].addEventListener("click", function response() {
+            if (optionEl_6.textContent === answer_2) {
+                displayFeedback.textContent = "correct";
+            } else {
+                displayFeedback.textContent = "incorrect";
+            }})
+        }
+        
     
     
 
@@ -100,9 +123,9 @@ function highScore() {
 
 //next question redirect
 function nextQuestion() {
-    var listEl = document.querySelector("list");
-    listEl
-    
-    
+    questionDisplay_2();
 }
+    
+    
+
 

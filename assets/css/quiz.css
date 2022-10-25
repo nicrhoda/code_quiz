@@ -6,11 +6,14 @@
     margin-top: 5rem;
     background-color: #7D9DCA;
     border-radius: .5rem;
+    font-family:'Courier New', Courier, monospace;
 }
+/* adding background color to the body of the document */
 body {
     background-color: #0E3D7E;
 }
 
+/* styling the timer display of the document */
 .timer-display {
     border: solid;
     float: right;
@@ -18,6 +21,7 @@ body {
     border-radius: 1rem;
 }
 
+/* styling for the high score button in the quiz */
 .high-score {
     float: left;
     border: solid;
@@ -26,12 +30,14 @@ body {
     background-color: #7D9DCA;
 }
 
+/* hover effect on the high score button */
 .high-score:hover {
     color: white;
     background-color: white;
     transition-duration: 400ms;
 }
 
+/* adding pointer and styling to the button class */
 .button {
     border: solid;
     display: flex;
@@ -43,16 +49,19 @@ body {
     text-align: center;
 }
 
+/* centering the questions on the screen */
 #questions {
     text-align: center;
     font-weight: bolder;
     font-size: larger;
 }
 
+/* aligning the text on the list to center */
 ul {
     text-align: center;
 }
 
+/* styling for the questions on the list */
 .option-1 {
     cursor: pointer;
     background-color: yellow;
@@ -71,6 +80,7 @@ ul {
     font-weight: bold;
 }
 
+/* styling for the feedback that is displayed when an option is selected */
 .feedback {
     text-align: center;
 }
