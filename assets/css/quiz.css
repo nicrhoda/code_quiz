@@ -32,5 +32,45 @@ body {
     transition-duration: 400ms;
 }
 
+.button {
+    border: solid;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    height: 2rem;
+    width: 5rem;
+    align-self: center;
+    text-align: center;
+}
 
+#questions {
+    text-align: center;
+    font-weight: bolder;
+    font-size: larger;
+}
 
+ul {
+    text-align: center;
+}
+
+.option-1 {
+    cursor: pointer;
+    background-color: yellow;
+    font-weight: bold;
+}
+
+.option-2 {
+    cursor: pointer;
+    background-color: yellow;
+    font-weight: bold;
+}
+
+.option-3 {
+    cursor: pointer;
+    background-color: yellow;
+    font-weight: bold;
+}
+
+.feedback {
+    text-align: center;
+}

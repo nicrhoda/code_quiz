@@ -1,6 +1,6 @@
 // Variables for questions
 
-var questions = document.getElementById("questions");
+var questions = document.getElementById('.questions');
 var time = document.querySelector('.time');
 var choices = document.querySelector('.choices');
 var questionCount = 0;
@@ -15,12 +15,13 @@ function setTime() {
     var timerInterval = setInterval(function(){
     secondsRemaining--;
     time.textContent = "Timer" + " " + secondsRemaining;
-
+    
     if(secondsRemaining === 0) {
         clearInterval(timerInterval);
-        highScore()
+        highScore();
     }
 }, 1000);
+
 }
 console.log(setTime);
 
@@ -45,32 +46,30 @@ var quizQuestions = [{
 //function for generating list with questions in it
 
 function addChoiceList() {
-    function newChoice(choices) {
         
-        var button = document.createElement("button");
-        var choicesEl = document.createElement('li');
-        var choicesContent = choices;
+        var button = document.createElement('button');
+        var choicesEl = document.querySelector('list');
+        var choicesContent = quizQuestions;
        
         
-        button.textContent = choicesContent;
+        button.textContent(choicesContent);
         button.className = "choices-btn";
 
         button.addEventListener("click", function() {
             userAnswer(button.textContent);
         }, true);
 
-        choicesEl.appendChild("button");
+        choicesEl.appendChild(button);
         questionList.appendChild(choicesEl);
     }
 
     var questionList = document.createElement('ul');
-    //list styles?
 
     var currentQuestion = quizQuestions[questionCount];
-    currentQuestion.choices.forEach(newChoice);
+    currentQuestion.choices.forEach(addChoiceList);
+    document.body.appendChild(currentQuestion);
+    
 
-    return questionList;
-}
 
 //right or wrong feedback function
 
@@ -89,6 +88,32 @@ function userAnswer() {
 
 }
 
+function advanceForward() {
+    questionCount++;
+    refreshScreen();
+}
+
+function refreshScreen() {
+    if (questionCount <= questions.length - 1) {
+        questions.textContent = quizQuestions[questionCount].title;
+
+    if (choices.children.length > 0) {
+        choices.removeChild(choices.children[0]);
+    }
+
+    choices.appendChild(addChoiceList());
+    } else {
+        window.location.href = "high-scores.html";
+    }
+}
 
 
-console.log(quizQuestions);
+var sample = document.createElement('div');
+
+document.body.appendChild(sample);
+
+
+
+
+
+
