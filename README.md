@@ -7,3 +7,4 @@ Application takes user input for a series of multiple choice questions and colle
 https://nicrhoda.github.io/code_quiz/
 
 
+![code_quiz](https://user-images.githubusercontent.com/112894805/197690322-eced5d4e-6ff5-469c-862c-2444c3d1fcc5.png)
